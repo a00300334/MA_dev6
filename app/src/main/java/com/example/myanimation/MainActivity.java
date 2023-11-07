@@ -20,10 +20,38 @@ public class MainActivity extends AppCompatActivity {
         imageView = findViewById(R.id.image);
     }
 
-    public void scalePressed(View view) {
+    public void setAnim(int id){
         Animation animation = AnimationUtils
-                .loadAnimation(this,R.anim.zoom);
+                .loadAnimation(this,id);
 
         imageView.startAnimation(animation);
+    }
+
+    public void scalePressed(View view) {
+        setAnim(R.anim.zoom);
+//        Animation animation = AnimationUtils
+//                .loadAnimation(this,R.anim.zoom);
+//
+//        imageView.startAnimation(animation);
+    }
+
+    public void clockwisePressed(View view) {
+        setAnim(R.anim.clockwise);
+    }
+
+    public void fadePressed(View view) {
+        setAnim(R.anim.fade);
+    }
+
+    public void slidePressed(View view) {
+        setAnim(R.anim.slide);
+    }
+
+    public void blinkPressed(View view) {
+        setAnim(R.anim.blink);
+    }
+
+    public void movePressed(View view) {
+        setAnim(R.anim.move);
     }
 }
